@@ -35,14 +35,14 @@ Du kannst jederzeit auf HMTPlay zugreifen – entweder über unsere Hauptdomain 
   [**hmt-play.hmt-network.de**](https://hmt-play.hmt-network.de)
 
 - **Alternative Domains**:
-    - [bob.hmt-play.hmt-network.de](https://bob.hmt-play.hmt-network.de)
-    - [elmo.hmt-play.hmt-network.de](https://elmo.hmt-play.hmt-network.de)
-    - [milo.hmt-play.hmt-network.de](https://milo.hmt-play.hmt-network.de)
-    - [zorro.hmt-play.hmt-network.de](https://zorro.hmt-play.hmt-network.de)
-    - [toby.hmt-play.hmt-network.de](https://toby.hmt-play.hmt-network.de)
-    - [dino.hmt-play.hmt-network.de](https://dino.hmt-play.hmt-network.de)
-    - [rex.hmt-play.hmt-network.de](https://rex.hmt-play.hmt-network.de)
-    - [otto.hmt-play.hmt-network.de](https://otto.hmt-play.hmt-network.de)
+  - [bob.hmt-play.hmt-network.de](https://bob.hmt-play.hmt-network.de)
+  - [elmo.hmt-play.hmt-network.de](https://elmo.hmt-play.hmt-network.de)
+  - [milo.hmt-play.hmt-network.de](https://milo.hmt-play.hmt-network.de)
+  - [zorro.hmt-play.hmt-network.de](https://zorro.hmt-play.hmt-network.de)
+  - [toby.hmt-play.hmt-network.de](https://toby.hmt-play.hmt-network.de)
+  - [dino.hmt-play.hmt-network.de](https://dino.hmt-play.hmt-network.de)
+  - [rex.hmt-play.hmt-network.de](https://rex.hmt-play.hmt-network.de)
+  - [otto.hmt-play.hmt-network.de](https://otto.hmt-play.hmt-network.de)
 
 ## Zukünftige Pläne
 
@@ -51,6 +51,14 @@ Bald werden wir einen **Discord-Bot** einführen, mit dem du noch mehr interakti
 
 ## Feedback & Unterstützung
 
-Deine Meinung ist uns wichtig! Wenn du Fragen hast, Vorschläge machen möchtest oder Hilfe benötigst, zögere nicht, uns zu kontaktieren. Du erreichst uns am besten über unseren [Discord-Server](https://discord.gg/W7gQqBmYvG).
+Deine Meinung ist uns wichtig! Wenn du Fragen hast, Vorschläge machen möchtest oder Hilfe benötigst, zögere nicht, uns zu kontaktieren. Du erreichst uns am besten über unseren [Discord-Server](https://discord.gg/).
+
+## Lizenzbedingungen
+
+Du darfst den **HMTPlay**-Code gerne verwenden und anpassen, jedoch gibt es einige Bedingungen:
+
+- **Verkauf**: Du darfst den Code **nicht verkaufen** oder anderweitig monetarisieren.
+- **Verteilung**: Du darfst den Code **nicht weiterverkaufen**, weitergeben oder gegen Geld anbieten.
+- **Credits**: Die Credits für das Projekt müssen gut sichtbar und **lesbar** sowohl auf der Website als auch in jeder Form der Verbreitung des Codes angegeben werden.
 
 Viel Spaß beim Spielen! 😄🎮
