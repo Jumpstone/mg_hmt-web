@@ -1,0 +1,356 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMTPlay - Premium Mini-Games</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --accent: #fd79a8;
+            --success: #00b894;
+            --glass: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--glass);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        nav a:hover {
+            background: var(--glass);
+            transform: translateY(-3px);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .game-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            height: 300px;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 1.5rem;
+        }
+
+        .game-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .game-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .play-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--glass);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/color/96/000000/owl.png" alt="HMTPlay Logo">
+            <h1>HMTPlay</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#games"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Premium Mini-Games Experience</h2>
+        <p>Entdecke unsere Sammlung von hochwertigen Browser-Spielen mit modernem Design und fesselndem Gameplay.</p>
+    </section>
+
+    <section id="games" class="games-grid">
+        <!-- Spiel 1 -->
+        <div class="game-card">
+            <span class="badge">Neu</span>
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Tic Tac Toe">
+            <div class="game-info">
+                <h3>Tic-Tac-Toe</h3>
+                <p>Klassiker mit modernem Twist</p>
+                <a href="tictactoe.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 2 -->
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Snake">
+            <div class="game-info">
+                <h3>Snake</h3>
+                <p>Der zeitlose Klassiker</p>
+                <a href="snake.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 3 -->
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Memory">
+            <div class="game-info">
+                <h3>Memory</h3>
+                <p>Teste dein Gedächtnis</p>
+                <a href="memory.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 4 -->
+        <div class="game-card">
+            <span class="badge">Beliebt</span>
+            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Tetris">
+            <div class="game-info">
+                <h3>Tetris</h3>
+                <p>Legendenhaftes Puzzle-Spiel</p>
+                <a href="tetris.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 5 -->
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1607513746994-51f730a44832?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Pong">
+            <div class="game-info">
+                <h3>Pong</h3>
+                <p>Der erste Arcade-Hit</p>
+                <a href="pong.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 6 -->
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Flappy Bird">
+            <div class="game-info">
+                <h3>Flappy Bird</h3>
+                <p>Der mobile Hit</p>
+                <a href="flappy.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 7 -->
+        <div class="game-card">
+            <span class="badge">Neu</span>
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Breakout">
+            <div class="game-info">
+                <h3>Breakout</h3>
+                <p>Ziegel zerschlagen</p>
+                <a href="breakout.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 8 -->
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Hangman">
+            <div class="game-info">
+                <h3>Hangman</h3>
+                <p>Worträtsel</p>
+                <a href="hangman.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 9 -->
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1585916420739-1d2d0c4b4c3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sudoku">
+            <div class="game-info">
+                <h3>Sudoku</h3>
+                <p>Logikrätsel</p>
+                <a href="sudoku.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+
+        <!-- Spiel 10 -->
+        <div class="game-card">
+            <span class="badge">Klassiker</span>
+            <img src="https://images.unsplash.com/photo-1639754390580-2e7437267698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Minesweeper">
+            <div class="game-info">
+                <h3>Minesweeper</h3>
+                <p>Minensuche</p>
+                <a href="minesweeper.html" class="play-btn">Jetzt spielen</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2023 HMTPlay. Alle Rechte vorbehalten.</p>
+    </footer>
+</div>
+</body>
+</html>
