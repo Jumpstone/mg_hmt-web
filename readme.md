@@ -51,7 +51,7 @@ Bald werden wir einen **Discord-Bot** einführen, mit dem du noch mehr interakti
 
 ## Feedback & Unterstützung
 
-Deine Meinung ist uns wichtig! Wenn du Fragen hast, Vorschläge machen möchtest oder Hilfe benötigst, zögere nicht, uns zu kontaktieren. Du erreichst uns am besten über unseren [Discord-Server](https://discord.gg/).
+Deine Meinung ist uns wichtig! Wenn du Fragen hast, Vorschläge machen möchtest oder Hilfe benötigst, zögere nicht, uns zu kontaktieren. Du erreichst uns am besten über unseren [Discord-Server](https://discord.gg/W7gQqBmYvG).
 
 ## Lizenzbedingungen
 
