@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMTPlay</title>
+    <title>HMTPlay | 404</title>
     <link rel="icon" href="Logo-controller.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -36,6 +36,12 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
         }
 
         header {
@@ -45,6 +51,7 @@
             margin-bottom: 3rem;
             padding: 1rem 0;
             border-bottom: 1px solid var(--glass);
+            width: 100%;
         }
 
         .logo {
@@ -86,82 +93,65 @@
             transform: translateY(-3px);
         }
 
-        .hero {
-            text-align: center;
-            margin-bottom: 4rem;
+        .error-content {
+            margin: 3rem 0;
         }
 
-        .hero h2 {
-            font-size: 3.5rem;
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #fd79a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
-            line-height: 1.2;
+            line-height: 1;
         }
 
-        .hero p {
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
             font-size: 1.2rem;
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto 2rem;
             opacity: 0.9;
         }
 
-        .buttons-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .game-btn {
-            display: flex;
-            flex-direction: column;
+        .home-button {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
             background: var(--glass);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem 1rem;
-            text-decoration: none;
             color: var(--light);
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            height: 120px;
-            text-align: center;
-            position: relative;
+            margin-top: 1rem;
         }
 
-        .game-btn:hover {
+        .home-button i {
+            margin-right: 10px;
+        }
+
+        .home-button:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .game-name {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--accent);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 600;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         footer {
             text-align: center;
-            margin-top: 5rem;
+            margin-top: auto;
             padding: 2rem 0;
             border-top: 1px solid var(--glass);
+            width: 100%;
         }
 
         .social-links {
@@ -219,16 +209,16 @@
         }
 
         @media (max-width: 768px) {
-            .buttons-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             nav ul {
                 gap: 1rem;
             }
 
-            .hero h2 {
-                font-size: 2.5rem;
+            .error-code {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
             }
 
             header {
@@ -249,11 +239,6 @@
                 font-size: 0.9rem;
                 padding: 8px 16px;
             }
-
-            .game-btn {
-                font-size: 1rem;
-                height: 100px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -261,17 +246,16 @@
                 padding: 1rem;
             }
 
-            .hero h2 {
-                font-size: 2rem;
+            .error-code {
+                font-size: 4rem;
             }
 
-            .hero p {
+            .error-title {
+                font-size: 1.5rem;
+            }
+
+            .error-message {
                 font-size: 1rem;
-            }
-
-            .buttons-container {
-                grid-template-columns: 1fr;
-                max-width: 300px;
             }
 
             .discord-button {
@@ -285,10 +269,9 @@
                 margin-right: 8px;
             }
 
-            .game-btn {
-                font-size: 1.1rem;
-                padding: 1.2rem;
-                height: 80px;
+            .home-button {
+                font-size: 1rem;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -313,59 +296,14 @@
         </div>
     </header>
 
-    <section class="hero">
-        <h2>Premium Mini-Games Experience</h2>
-        <p>Entdecke unsere Sammlung von hochwertigen Browser-Spielen mit modernem Design und fesselndem Gameplay.</p>
-    </section>
-
-    <section id="games" class="buttons-container">
-        <!-- Spiel Buttons -->
-        <a href="tictactoe.html" class="game-btn">
-            <div class="game-name">
-                <span>Tic-Tac-</span>
-                <span>Toe</span>
-            </div>
-            <span class="badge">Neu</span>
+    <div class="error-content">
+        <div class="error-code">404</div>
+        <h2 class="error-title">Seite nicht gefunden</h2>
+        <p class="error-message">Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben. Vielleicht finden Sie was Sie suchen, wenn Sie zu unserer Startseite zurückkehren.</p>
+        <a href="index.html" class="home-button">
+            <i class="fas fa-home"></i> Zur Startseite
         </a>
-
-        <a href="snake.html" class="game-btn">
-            <div class="game-name">Snake</div>
-        </a>
-
-        <a href="memory.html" class="game-btn">
-            <div class="game-name">Memory</div>
-        </a>
-
-        <a href="tetris.html" class="game-btn">
-            <div class="game-name">Tetris</div>
-            <span class="badge">Beliebt</span>
-        </a>
-
-        <a href="pong.html" class="game-btn">
-            <div class="game-name">Pong</div>
-        </a>
-
-        <a href="flappy.html" class="game-btn">
-            <div class="game-name">Flappy Bird</div>
-        </a>
-
-        <a href="breakout.html" class="game-btn">
-            <div class="game-name">Breakout</div>
-        </a>
-
-        <a href="hangman.html" class="game-btn">
-            <div class="game-name">Hangman</div>
-        </a>
-
-        <a href="sudoku.html" class="game-btn">
-            <div class="game-name">Sudoku</div>
-        </a>
-
-        <a href="minesweeper.html" class="game-btn">
-            <div class="game-name">Minesweeper</div>
-            <span class="badge">Klassiker</span>
-        </a>
-    </section>
+    </div>
 
     <footer>
         <div class="social-links">
